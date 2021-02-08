@@ -47,7 +47,8 @@ public class Fecha {
 			}
 		return diasMes;
 	}
-
+	
+	//determina si anyo bisiesto
 	private int bisiesto() {
 		int diasMes;
 		if((anio% 400==0)||( (anio% 4 == 0)&&(anio%100 !=0)))

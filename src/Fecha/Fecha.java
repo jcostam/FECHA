@@ -42,12 +42,18 @@ public class Fecha {
 			case 9:
 			case 11: diasMes= 30; break;
 			case 2: // verificación de año bisiesto
-				if((anio% 400==0)||( (anio% 4 == 0)&&(anio%100 !=0)))
-					diasMes= 29;
-				else 
-					diasMes= 28;
+			diasMes = bisiesto();
 				break;
 			}
+		return diasMes;
+	}
+
+	private int bisiesto() {
+		int diasMes;
+		if((anio% 400==0)||( (anio% 4 == 0)&&(anio%100 !=0)))
+			diasMes= 29;
+		else 
+			diasMes= 28;
 		return diasMes;
 	}
 	
